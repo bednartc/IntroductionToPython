@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# Done: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -31,14 +31,14 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 import rosegraphics as rg
 Window = rg.TurtleWindow()
 bob = rg.SimpleTurtle('turtle')
-bob = rg.Pen('red', 10)
+bob.Pen = rg.Pen('red', 10)
 bob.speed = 20
 todd = rg.SimpleTurtle('turtle')
-todd = rg.Pen('blue', 10)
+todd.Pen = rg.Pen('blue', 10)
 todd.speed = 5
-size = 400
+size = 200
 
-for k in range(10)
+for k in range(10):
     bob.draw_circle(size)
     bob.pen_up()
     bob.forward(10)
@@ -48,4 +48,12 @@ for k in range(10)
     bob.pen_down()
     size=size-10
 
-window.close_on_mouse_click()
+    todd.draw_circle(size)
+    todd.pen_up()
+    todd.backward(10)
+    todd.left(45)
+    todd.forward(10)
+    todd.right(45)
+    todd.pen_down()
+
+Window.close_on_mouse_click()
