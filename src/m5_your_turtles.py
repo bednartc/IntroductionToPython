@@ -46,7 +46,7 @@ for k in range(10):
     bob.forward(10)
     bob.left(45)
     bob.pen_down()
-    size=size-10
+    size = size-10
 
     todd.draw_circle(size)
     todd.pen_up()
